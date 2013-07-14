@@ -4,6 +4,9 @@ class people::tombar{
   include ctags
   include chrome
   include chrome::canary
+
+
+  include osx
   include fish
   include firefox
   include geoip
