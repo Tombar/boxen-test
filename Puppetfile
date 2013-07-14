@@ -34,3 +34,27 @@ github "xquartz",    "1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+
+github "alfred",
+github "ctags",
+github "chrome",
+github "chrome::canary",
+github "fish",
+github "firefox",
+github "geoip",
+github "heroku",
+github "iterm2::stable",
+github "java",
+github "jmeter",
+github "notational_velocity::nvalt",
+github "skype",
+github "spectacle",
+github "tmux",
+github "tunnelblick",
+github "virtualbox",
+github "vagrant",
+github "vlc",
+github "wget",
+
+
+
