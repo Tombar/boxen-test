@@ -6,8 +6,7 @@ class people::tombar{
   include chrome::canary
 
 
-  include osx
-  include fish
+  include osx -> include fish
   include firefox
   include geoip
   include heroku
