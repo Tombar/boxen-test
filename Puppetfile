@@ -4,7 +4,7 @@
 # default. This ensures at least the ability to construct a basic
 # environment.
 
-def github(name, version = nil, options = nil)
+def github(name, version, options = nil)
   options ||= {}
   options[:repo] ||= "boxen/puppet-#{name}"
   mod name, version, :github_tarball => options[:repo]
@@ -35,26 +35,25 @@ github "xquartz",    "1.1.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "alfred",
-github "ctags",
-github "chrome",
-github "chrome::canary",
-github "fish",
-github "firefox",
-github "geoip",
-github "heroku",
-github "iterm2::stable",
-github "java",
-github "jmeter",
-github "notational_velocity::nvalt",
-github "skype",
-github "spectacle",
-github "tmux",
-github "tunnelblick",
-github "virtualbox",
-github "vagrant",
-github "vlc",
-github "wget",
+github "alfred",                          "1.0.1"
+github "ctags",                           "1.0.0"
+github "chrome",                          "1.1.0"
+github "firefox",                         "1.1.1"
+github "fish",                            "1.0.0"
+github "geoip",                           "1.0.0"
+github "heroku",                          "2.0.0"
+github "iterm2",                          "1.0.2"
+github "java",                            "1.1.0"
+github "jmeter",                          "0.1.1"
+github "notational_velocity",             "1.1.0"
+github "skype",                           "1.0.2"
+github "spectacle",                       "1.0.0"
+github "tmux",                            "1.0.2"
+github "tunnelblick",                     "1.0.1"
+github "virtualbox",                      "1.0.1"
+github "vagrant",                         "2.0.7"
+github "vlc",                             "1.0.3"
+github "wget",                            "1.0.0"
 
 
 
