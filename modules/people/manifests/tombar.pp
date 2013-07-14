@@ -1,7 +1,21 @@
 class people::tombar{
 
-  include osx
   osx::recovery_message { 'If this Mac is found, please email martin.loy@batanga.com': } 
+
+
+  include osx::global::enable_keyboard_control_access
+  include osx::global::expand_save_dialog
+  include osx::global::disable_remote_control_ir_receiver
+  
+  include osx::dock::2d
+  include osx::dock::autohide
+  include osx::dock::clear_dock
+
+  include osx::dock::icon_size
+
+  class { 'osx::dock::icon_size': 
+    size => 16
+  }
 
   include alfred
   include ctags
