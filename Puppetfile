@@ -4,7 +4,7 @@
 # default. This ensures at least the ability to construct a basic
 # environment.
 
-def github(name, version, options = nil)
+def github(name, version = nil, options = nil)
   options ||= {}
   options[:repo] ||= "boxen/puppet-#{name}"
   mod name, version, :github_tarball => options[:repo]
