@@ -1,7 +1,7 @@
 class people::tombar{
 
   include osx
-  osx::recovery_message { 'If this Mac is found, please email martin.loy@batanga.com' } 
+  osx::recovery_message { 'If this Mac is found, please email martin.loy@batanga.com': } 
 
   include alfred
   include ctags
