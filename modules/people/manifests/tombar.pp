@@ -11,8 +11,6 @@ class people::tombar{
   include osx::dock::autohide
   include osx::dock::clear_dock
 
-  include osx::dock::icon_size
-
   class { 'osx::dock::icon_size': 
     size => 16
   }
