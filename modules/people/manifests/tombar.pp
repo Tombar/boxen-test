@@ -1,12 +1,14 @@
 class people::tombar{
 
+  require osx
+
   include alfred
   include ctags
   include chrome
   include chrome::canary
 
+  include fish
 
-  include osx -> include fish
   include firefox
   include geoip
   include heroku
