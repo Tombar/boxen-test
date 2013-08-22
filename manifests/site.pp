@@ -75,6 +75,29 @@ node default {
   include ruby::1_9_3
   include ruby::2_0_0
 
+  # make/support rbenv implicits gemsets
+  # http://devoh.com/blog/2012/07/implicit-gemsets-with-rbenv
+  exec { 'bundle config --global':
+    command => 'bundle config --global bin bin \
+                && bundle config --global path .bundle',
+    creates => "/Users/${::luser}/.bundle/config",
+    path    => '/usr/bin',
+  }
+
+  # make/support rbenv implicits gemsets
+  # Installing rbenv plugin
+  ruby::plugin { 'rbenv-vars':
+    ensure  => 'v1.2.0',
+    source  => 'sstephenson/rbenv-vars',
+    require => File['/opt/boxen/rbenv/vars']
+  }
+
+  # make/support rbenv implicits gemsets
+  # set rbenv-vars to use local gems
+  file { '/opt/boxen/rbenv/vars':
+    content => 'GEM_PATH=.bundle'
+  }
+
   # common, useful packages
   package {
     [
@@ -88,4 +111,5 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
 }

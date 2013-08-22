@@ -35,6 +35,8 @@ github "xquartz",    "1.1.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
+github "android",                         "1.0.0"
+
 github "alfred",                          "1.0.1"
 github "ctags",                           "1.0.0"
 github "chrome",                          "1.1.0"
@@ -51,12 +53,15 @@ github "skype",                           "1.0.2"
 github "spectacle",                       "1.0.0"
 github "tmux",                            "1.0.2"
 github "tunnelblick",                     "1.0.1"
+github "transmission",			  "1.0.0"
 github "osx",                             "1.5.0"
 github "property_list_key",               "0.1.0"
+github "python",			  "1.1.1"
 github "virtualbox",                      "1.0.1"
 github "vagrant",                         "2.0.7"
 github "vlc",                             "1.0.3"
-github "wget",                            "1.0.0"
+github "vim", 				  "1.0.5"
+github "wget",                            "1.0.1", :repo => "tombar/puppet-wget"
 
-
+github "limechat",              "1.1.0", :repo => "mozilla-boxen/puppet-limechat"
 
