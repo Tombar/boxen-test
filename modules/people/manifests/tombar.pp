@@ -40,7 +40,7 @@ class people::tombar{
   include virtualbox
   include vagrant
   # vagrant::plugin { 'librarian-puppet': }
-  vagrant::plugin { 'cachier': }
+  vagrant::plugin { ['cachier', 'vagrant-vbox-snapshot', 'vagrant-berkshelf']:}
   include vlc
   include wget
 
@@ -77,7 +77,7 @@ class people::tombar{
     content => '.bundle',
   }
 
-  package { ['boxen/brews/pwgen', 'boxen/brews/w3m', 'boxen/brews/bwm-ng']:
+  package { ['boxen/brews/pwgen', 'boxen/brews/w3m', 'boxen/brews/bwm-ng', 'jq', 'unrar']:
     ensure => present
   }
 
